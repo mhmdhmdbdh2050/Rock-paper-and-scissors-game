@@ -1,4 +1,5 @@
 import random
+import sys
 rock = """
     _______
 ---'   ____)
@@ -23,19 +24,20 @@ scissors = """
       (____)
 ---.__(___)
 """
-print("\nWelcome to the Rock, Peper, Scissors game :")
+print("\nWelcome to the Rock, Paper, Scissors game:")
 confirm = input("Press enter to continue of type (Help) for the rules ").lower()
 if confirm =="help" : 
  print("""
 ********Rules********
 1)You choose and the computer chooses
 2)Rock smashes scissors -> Rock wins
-3)Scissors cut peper -> Scissors wins
+3)Scissors cut paper -> Scissors wins
 4)Paper covers Rock -> Paper wins 
 """)
 user_choice = input("Enter your choice(rock , paper , scissors) : ").lower() 
 if user_choice not in ["rock", "paper", "scissors"]:
     print("Invalid choice, please run the program again.")
+    sys.exit(2)
 else:
     if user_choice == "rock":
         print(f"\nYou chose:\n{rock}")
